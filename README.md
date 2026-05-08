@@ -14,15 +14,15 @@ Built with Python + Streamlit. Upload your file, choose how to split it into sli
 
 ## ✨ Features
 
-- 📂 Supports both **DOCX** and **PDF** files
-- 🔀 **4 ways to split** your document into slides:
+-  Supports both **DOCX** and **PDF** files
+-  **4 ways to split** your document into slides:
   - **By Headings** — each heading becomes a new slide
   - **By Page Breaks** — each page becomes a slide
   - **By Custom Keyword** — you choose the keyword (e.g. Q, Section, Chapter)
   - **By Paragraphs** — groups every 3 paragraphs into a slide
-- 🖼️ **Auto-extracts images** from the source file and places them on slides
-- 🎨 **Dark theme styling** applied automatically — clean, professional look
-- ⬇️ One-click **PPTX download**
+-  **Auto-extracts images** from the source file and places them on slides
+-  **Dark theme styling** applied automatically — clean, professional look
+-  One-click **PPTX download**
 
 ---
 
@@ -79,8 +79,3 @@ streamlit run doc_to_ppt_generic.py
 **Madhura Shirsikar**  
 [LinkedIn](https://www.linkedin.com/in/your-profile) • [GitHub](https://github.com/your-username)
 
----
-
-## 📃 License
-
-MIT License — free to use and modify.
