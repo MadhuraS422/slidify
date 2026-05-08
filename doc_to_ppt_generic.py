@@ -13,11 +13,11 @@ st.set_page_config(page_title="Doc → PPT Converter", page_icon="🎯", layout=
 st.markdown("""
     <style>
     .main { background-color: #e8f5e9; }
-.stApp { background-color: #e8f5e9; color: white; }
+.stApp { background-color: #e8f5e9; color: black; }
         h1 { color: #ffffff; font-size: 2rem; }
         .stRadio label { color: #cccccc; }
-        .stTextInput input { background-color: #1e1e1e; color: white; }
-        .stButton button { background-color: #6c63ff; color: white; border-radius: 8px; }
+        .stTextInput input { background-color: #1e1e1e; color: black; }
+        .stButton button { background-color: #6c63ff; color: black; border-radius: 8px; }
     </style>
 """, unsafe_allow_html=True)
 
