@@ -16,8 +16,8 @@ st.markdown("""
 .stApp { background-color: #e8f5e9; color: black; }
         h1 { color: #ffffff; font-size: 2rem; }
         .stRadio label { color: #cccccc; }
-        .stTextInput input { background-color: #1e1e1e; color: black; }
-        .stButton button { background-color: #6c63ff; color: black; border-radius: 8px; }
+        .stTextInput input { background-color: white; color: black; }
+        .stButton button { background-color: darkgreen; color: white; border-radius: 8px; }
     </style>
 """, unsafe_allow_html=True)
 
