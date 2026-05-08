@@ -39,28 +39,6 @@ Built with Python + Streamlit. Upload your file, choose how to split it into sli
 
 ---
 
-## ⚙️ Run Locally
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/your-username/doc-to-ppt.git
-cd doc-to-ppt
-```
-
-### 2. Install dependencies
-```bash
-pip install streamlit python-pptx python-docx pymupdf
-```
-
-> Also install **Pandoc**: https://pandoc.org/installing.html
-
-### 3. Run the app
-```bash
-streamlit run doc_to_ppt_generic.py
-```
-
----
-
 ## 📸 Screenshot
 
 *(Add a screenshot of your Streamlit UI here)*
