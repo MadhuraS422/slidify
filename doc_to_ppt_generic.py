@@ -11,9 +11,8 @@ st.set_page_config(page_title="Doc → PPT Converter", page_icon="🎯", layout=
 
 # --- Custom CSS ---
 st.markdown("""
-    <style>
-        .main { background-color: #0f0f0f; }
-        .stApp { background-color: #0f0f0f; color: white; }
+    <style>.main { background-color: #e8f5e9; }
+.stApp { background-color: #e8f5e9; color: white; }
         h1 { color: #ffffff; font-size: 2rem; }
         .stRadio label { color: #cccccc; }
         .stTextInput input { background-color: #1e1e1e; color: white; }
