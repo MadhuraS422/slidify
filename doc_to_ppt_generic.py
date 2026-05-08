@@ -12,7 +12,7 @@ st.set_page_config(page_title="Doc → PPT Converter", page_icon="🎯", layout=
 # --- Custom CSS ---
 st.markdown("""
     <style>
-        .main { background-color: #0f0f0f; }
+        .main { background-color: green; }
         .stApp { background-color: #0f0f0f; color: white; }
         h1 { color: #ffffff; font-size: 2rem; }
         .stRadio label { color: #cccccc; }
