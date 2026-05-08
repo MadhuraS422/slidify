@@ -7,25 +7,17 @@ from pptx.dml.color import RGBColor
 import fitz  # PyMuPDF
 import docx  # python-docx
 
-st.set_page_config(page_title="Doc → PPT Converter", page_icon="🎯", layout="centered")
+st.set_page_config(page_title="Doc → PPT Converter", layout="centered")
 
 # --- Custom CSS ---
 st.markdown("""
     <style>
         .main { background-color: #e8f5e9; }
-        .stApp { background-color: #e8f5e9; color: #1b3a2d; }
-        h1 { color: #1b3a2d; font-size: 2rem; }
-        p, label, .stCaption { color: #1b3a2d !important; }
-        .stRadio label { color: #1b3a2d !important; }
-        .stTextInput input { background-color: #c8e6c9; color: #1b3a2d; border: 1px solid #2e7d32; }
-        .stTextInput label { color: #1b3a2d !important; }
-        .stButton button { background-color: #2e7d32; color: white; border-radius: 8px; }
-        .stButton button:hover { background-color: #1b5e20; }
-        .stFileUploader { background-color: #c8e6c9; border-radius: 10px; padding: 10px; }
-        .stFileUploader label { color: #1b3a2d !important; font-weight: 600; }
-        .stAlert { background-color: #c8e6c9; color: #1b3a2d; }
-        section[data-testid="stFileUploadDropzone"] { background-color: #a5d6a7 !important; color: #1b3a2d !important; }
-        section[data-testid="stFileUploadDropzone"] * { color: #1b3a2d !important; }
+        .stApp { background-color: #e8f5e9; color: white; }
+        h1 { color: #ffffff; font-size: 2rem; }
+        .stRadio label { color: #cccccc; }
+        .stTextInput input { background-color: #1e1e1e; color: white; }
+        .stButton button { background-color: #6c63ff; color: white; border-radius: 8px; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -74,13 +66,6 @@ def extract_pdf_images(input_file, image_dir="pdf_images"):
 
 # ─── Split text into slides ───────────────────────────────────────────────────
 def split_text(text, method, keyword=None):
-    """
-    method options:
-      'heading'   – split on lines that look like headings (short, no period at end)
-      'page'      – split on form-feed character \f (PDF page breaks)
-      'keyword'   – split whenever a user-defined keyword appears at line start
-      'paragraph' – split every N non-empty paragraphs (default 3)
-    """
     slides = []
 
     if method == "heading":
@@ -210,7 +195,6 @@ def main():
 
         with st.spinner("Converting... please wait ⏳"):
             try:
-                # Extract text
                 if input_ext == "docx":
                     text   = extract_docx_text(input_path)
                     images = extract_docx_images(input_path)
@@ -218,11 +202,9 @@ def main():
                     text   = extract_pdf_text(input_path)
                     images = extract_pdf_images(input_path)
 
-                # Split into slides
                 slides = split_text(text, chosen, keyword)
                 st.info(f"✅ {len(slides)} slide(s) detected using '{method}'")
 
-                # Build markdown & convert
                 md_content = build_markdown(slides)
                 md_path.write_text(md_content, encoding="utf-8")
                 convert_md_to_pptx(md_path, output_path)
